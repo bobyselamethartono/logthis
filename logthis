@@ -1,0 +1,17 @@
+#!/usr/bin/ruby
+
+# Load required modules
+require 'time'
+
+# Put something to your log
+post = gets.chomp
+
+# Create ~/logthislogs/ folder if it doesn't exist
+if File.directory?("#{Dir.home}/logthislogs/") == false
+    Dir.mkdir("#{Dir.home}/logthislogs/")
+end
+
+# Create a file to contain the post
+file = File.new("#{Dir.home}/logthislogs/#{Time.new.utc.to_i}.txt","w")
+file.puts(post)
+file.close
