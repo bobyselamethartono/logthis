@@ -4,7 +4,7 @@
 require 'time'
 
 # Read all the logs in descending order
-Dir.glob("#{Dir.home}/logthislogs/*").sort{ |x, y| x.to_i <=> y.to_i }.each do |file|
+Dir.glob("#{Dir.home}/logthislogs/*").sort.reverse.each do |file|
     File.open(file,"r").each_line do |line|
         basename = File.basename(file,".txt").to_i
         time = Time.at(basename).localtime.to_s
