@@ -1,0 +1,15 @@
+#!/usr/bin/ruby
+
+# Load required modules
+require 'time'
+
+# Read all the logs in descending order
+Dir.glob("#{Dir.home}/logthislogs/*").sort.reverse.each do |file|
+    f = File.open(file,"r")
+    f.each_line do |line|
+        basename = File.basename(file)
+#        time = Time.at(basename).localtime.to_i
+        puts basename + "\ ->\ " + line
+    end
+    f.close
+end
