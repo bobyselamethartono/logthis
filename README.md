@@ -5,7 +5,7 @@ A simple Ruby program to create logs written by you.
 A working Ruby interpreter.
 
 ## Usage(s)
-`logthis` and then input something. `readlogs` to read the logs you wrote with timestamps. `readlogs` to read the logs you wrote with filenames.
+`logthis` and then input something. `readlogs` to read the logs you wrote with timestamps. `readlogsalt` to read the logs you wrote with filenames.
 
 ## Notice(s)
 This program will automatically creates **logthislogs** folder in your home directory if it doesn't exist. Your logs will be created inside the **logthislogs** directory.
